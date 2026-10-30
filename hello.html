@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>첫 번째 페이지</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 20vh; }
+    button { font-size: 1.1rem; padding: 0.6em 1.2em; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1 id="msg">안녕하세요!</h1>
+  <button id="btn">눌러보세요</button>
+  <script>
+    const greetings = ["안녕하세요!", "반가워요!", "오늘도 좋은 하루!", "코딩 첫 시도 성공!"];
+    let i = 0;
+    document.getElementById("btn").addEventListener("click", () => {
+      i = (i + 1) % greetings.length;
+      document.getElementById("msg").textContent = greetings[i];
+    });
+  </script>
+</body>
+</html>
